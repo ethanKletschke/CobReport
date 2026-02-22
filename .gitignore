@@ -1,0 +1,5 @@
+# Binaries
+bin/
+
+# Build Artifacts
+*.zip

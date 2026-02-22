@@ -1,0 +1,34 @@
+# Project metadata for humans to read
+# Not used by the application at runtime
+
+project-meta:
+  project-name: CobReport
+  author: Ethan Kletschke
+  date-started: 2026-02-22
+  last-updated: 2026-02-22
+  languages:
+    - COBOL
+  status: Experimental
+  license: MIT
+  version: 0.0.1
+
+build:
+  dev-environments:
+    - Windows 11
+  test-environments:
+    - Windows 11
+  target-platforms:
+    - Windows 11
+  compiler:
+    compiler-name: cobc
+    static-compiler: false
+    compiler-version: 3.2
+    compilation:
+      compilation-method: transpile
+      source-lang: COBOL
+      transpiled-lang: C
+
+team:
+  author: Ethan Kletschke
+  contributors:
+    - Ethan Kletschke
