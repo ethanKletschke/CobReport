@@ -30,6 +30,9 @@ DATA DIVISION.
       *> Link the report to its file.
       REPORT IS Sales-Report.
 
+  WORKING-STORAGE SECTION.
+    01 WS-Date PIC 9999/99/99.
+
   REPORT SECTION.
     RD Sales-Report
       PAGE LIMIT IS 36 LINES
