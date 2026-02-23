@@ -39,7 +39,8 @@ DATA DIVISION.
       HEADING 1
       FIRST DETAIL 6
       LAST DETAIL 50.
-      01 TYPE IS RH. *> Report Heading
+
+      01 TYPE RH. *> Report Heading
         05 LINE + 1.
           10 COL 1 VALUE "==============================================".
         05 LINE + 1.
@@ -51,13 +52,13 @@ DATA DIVISION.
         05 LINE + 1.
           10 COL 1 VALUE "==============================================".
 
-      01 TYPE IS PH. *> Page Heading
+      01 TYPE PH. *> Page Heading
         05 LINE + 1.
           10 COL 1 PIC 9999/99/99 SOURCE WS-Date.
         05 LINE + 1.
           10 COL 3 VALUE "Sale Num.".
 
-      01 TYPE IS DE.
+      01 TYPE DE.
         05 LINE + 1.
           10 COL 3 PIC 9(5) SOURCE FL-Sale-Num.
 
@@ -70,6 +71,7 @@ DATA DIVISION.
           10 COL + 2 SOURCE PAGE-COUNTER PIC Z9.
         05 LINE + 1.
           10 COL 3 PIC X(25) VALUE ALL "*".
+      01 TYPE RF.
 
 PROCEDURE DIVISION.
   MOVE FUNCTION CURRENT-DATE(1:8) TO WS-Date.
