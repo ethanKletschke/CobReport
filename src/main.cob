@@ -53,7 +53,7 @@ DATA DIVISION.
 
       01 TYPE IS PH. *> Page Heading
         05 LINE + 1.
-          10 COL 3 VALUE "".
+          10 COL 3 PIC 9999/99/99 SOURCE WS-Date.
 
       01 TYPE PF. *> Page Footer
         05 LINE + 1.
@@ -62,7 +62,8 @@ DATA DIVISION.
           10 COL + 2 SOURCE PAGE-COUNTER PIC Z9.
 
 PROCEDURE DIVISION.
-  DISPLAY "CobReport v0.0.1".
+  MOVE FUNCTION CURRENT-DATE(1:8) TO WS-Date.
+
   STOP RUN.
 
 END PROGRAM CobReport.
