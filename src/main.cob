@@ -41,15 +41,15 @@ DATA DIVISION.
       LAST DETAIL 50.
       01 TYPE IS RH. *> Report Heading
         05 LINE + 1.
-          10 COL 1 VALUE "========================================".
+          10 COL 1 VALUE "==============================================".
         05 LINE + 1.
-          10 COL 1 VALUE "|                                      |".
+          10 COL 1 VALUE "|                                            |".
         05 LINE + 1.
-          10 COL 1 VALUE "|            Sales Report              |".
+          10 COL 1 VALUE "|               Sales Report                 |".
         05 LINE + 1.
-          10 COL 1 VALUE "|            ~~~~~~~~~~~~              |".
+          10 COL 1 VALUE "|               ~~~~~~~~~~~~                 |".
         05 LINE + 1.
-          10 COL 1 VALUE "========================================".
+          10 COL 1 VALUE "==============================================".
 
       01 TYPE IS PH. *> Page Heading
         05 LINE + 1.
