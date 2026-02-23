@@ -3,6 +3,6 @@
 cobc ^
   -I ../src ^
   -free ^
-  -x ../src/*.cbl ^
+  -x ../src/*.cob ^
   -o ../bin/CobReport ^
   -w -q

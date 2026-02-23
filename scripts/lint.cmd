@@ -3,5 +3,5 @@
 cobc ^
   -I ../src ^
   -free ^
-  -fsyntax-only ../src/*.cbl ^
+  -fsyntax-only ../src/*.cob ^
   -Wall -Wextra -Wno-terminator
