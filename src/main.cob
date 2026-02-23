@@ -57,9 +57,13 @@ DATA DIVISION.
 
       01 TYPE PF. *> Page Footer
         05 LINE + 1.
+          10 COL 3 PIC X(25) VALUE ALL "*".
+        05 LINE + 1.
           *> Page counter
           10 COL 1 VALUE "Page".
           10 COL + 2 SOURCE PAGE-COUNTER PIC Z9.
+        05 LINE + 1.
+          10 COL 3 PIC X(25) VALUE ALL "*".
 
 PROCEDURE DIVISION.
   MOVE FUNCTION CURRENT-DATE(1:8) TO WS-Date.
