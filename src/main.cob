@@ -42,7 +42,7 @@ DATA DIVISION.
 
       01 TYPE RH. *> Report Heading
         05 LINE + 1.
-          10 COL 1 VALUE "==============================================".
+          10 COL 1 VALUE "----------------------------------------------".
         05 LINE + 1.
           10 COL 1 VALUE "|                                            |".
         05 LINE + 1.
@@ -50,13 +50,15 @@ DATA DIVISION.
         05 LINE + 1.
           10 COL 1 VALUE "|               ~~~~~~~~~~~~                 |".
         05 LINE + 1.
-          10 COL 1 VALUE "==============================================".
+          10 COL 1 VALUE "----------------------------------------------".
 
       01 TYPE PH. *> Page Heading
         05 LINE + 1.
           10 COL 1 PIC 9999/99/99 SOURCE WS-Date.
         05 LINE + 1.
           10 COL 3 VALUE "Sale Num.".
+        05 LINE + 1.
+          10 COL 1 PIC X(40) VALUE ALL "=".
 
       01 TYPE DE.
         05 LINE + 1.
@@ -64,13 +66,13 @@ DATA DIVISION.
 
       01 TYPE PF. *> Page Footer
         05 LINE + 1.
-          10 COL 3 PIC X(25) VALUE ALL "*".
+          10 COL 3 PIC X(40) VALUE ALL "-".
         05 LINE + 1.
           *> Page counter
           10 COL 1 VALUE "Page".
           10 COL + 2 SOURCE PAGE-COUNTER PIC Z9.
         05 LINE + 1.
-          10 COL 3 PIC X(25) VALUE ALL "*".
+          10 COL 3 PIC X(40) VALUE ALL "-".
       01 TYPE RF.
 
 PROCEDURE DIVISION.
