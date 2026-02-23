@@ -54,6 +54,12 @@ DATA DIVISION.
       01 TYPE IS PH. *> Page Heading
         05 LINE + 1.
           10 COL 3 PIC 9999/99/99 SOURCE WS-Date.
+        05 LINE + 1.
+          10 COL 3 VALUE "Sale Num.".
+
+      01 TYPE IS DE.
+        05 LINE + 1.
+          10 COL 3 PIC 9(5) SOURCE FL-Sale-Num.
 
       01 TYPE PF. *> Page Footer
         05 LINE + 1.
