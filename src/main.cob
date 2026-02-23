@@ -35,10 +35,10 @@ DATA DIVISION.
 
   REPORT SECTION.
     RD Sales-Report
-      PAGE LIMIT IS 36 LINES
+      PAGE LIMIT IS 50 LINES
       HEADING 1
-      FIRST DETAIL 5
-      LAST DETAIL 36.
+      FIRST DETAIL 6
+      LAST DETAIL 50.
       01 TYPE IS RH. *> Report Heading
         05 LINE + 1.
           10 COL 1 VALUE "========================================".
