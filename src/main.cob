@@ -23,7 +23,7 @@ DATA DIVISION.
         05 FILLER PIC X(4) VALUE ALL SPACES.
         05 FL-Profit PIC $$,$$$,$$$.99.
         05 FILLER PIC X(4) VALUE ALL SPACES.
-        05 FL-Department PIC X(25).
+        05 FL-Department PIC A(25).
 
     *> Output report file.
     FD Report-File
