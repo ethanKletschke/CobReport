@@ -23,7 +23,7 @@ FILE SECTION.
       05 FILLER PIC X(4) VALUE ALL SPACES.
       05 FL-Profit PIC $$,$$$,$$$.99.
       05 FILLER PIC X(4) VALUE ALL SPACES.
-      05 FL-Item-Sold PIC X(25).
+      05 FL-Department PIC X(25).
 
 PROCEDURE DIVISION.
   DISPLAY "CobReport v0.0.1".
