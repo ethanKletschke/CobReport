@@ -98,6 +98,10 @@ PROCEDURE DIVISION.
   *> Store today's date for use in the report
   MOVE FUNCTION CURRENT-DATE(1:8) TO WS-Date.
 
+  *> X"0D0A" = "\r\n"
+  DISPLAY "CobReport v1.0.0" X'0D0A' "Press Enter to generate the report".
+  ACCEPT OMITTED.
+
   *> Open files
   OPEN INPUT Sales-File. *> For report input
   OPEN OUTPUT Report-File. *> For report output
@@ -126,6 +130,9 @@ PROCEDURE DIVISION.
   *> Close the files used in the program
   CLOSE Sales-File.
   CLOSE Report-File.
+
+  DISPLAY "Done! Press Enter to Exit".
+  ACCEPT OMITTED.
 
   *> Close the program
   STOP RUN.
