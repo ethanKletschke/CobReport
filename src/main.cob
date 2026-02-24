@@ -21,9 +21,9 @@ DATA DIVISION.
       01 Sales-Record.
         05 FL-Sale-Num PIC 9(5).
         05 FILLER PIC X(4) VALUE ALL SPACES.
-        05 FL-Profit PIC $$,$$$,$$$.99.
+        05 FL-Profit PIC Z(6)9.99.
         05 FILLER PIC X(4) VALUE ALL SPACES.
-        05 FL-Department PIC A(25).
+        05 FL-City PIC A(20).
 
     *> Output report file.
     FD Report-File
@@ -57,6 +57,7 @@ DATA DIVISION.
           10 COL 1 PIC 9999/99/99 SOURCE WS-Date.
         05 LINE + 1.
           10 COL 3 VALUE "Sale Num.".
+          10 COL 11 PIC $$,$$$,$$$.99 SOURCE FL-Profit.
         05 LINE + 1.
           10 COL 1 PIC X(40) VALUE ALL "=".
 
