@@ -4,9 +4,9 @@ name: Compile CobReport
 # Controls when the workflow will run
 on:
   push:
-    branches: "main"
+    branches: ["main"]
   pull_request:
-    branches: "main"
+    branches: ["main"]
   workflow_dispatch:
 
 jobs:
