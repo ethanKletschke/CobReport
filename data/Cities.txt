@@ -1,0 +1,9 @@
+This text file is only for programmer reference.
+These are the cities to use in "Sales.dat":
+
+Johannesburg
+Cape Town
+Durban
+Port Elizabeth
+
+Using your own city is fine, as long as you keep it below 20 characters
