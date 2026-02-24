@@ -1,0 +1,26 @@
+# Workflow Name
+name: Compile CobReport
+
+# Controls when the workflow will run
+on:
+  push:
+    branches: "main"
+  pull_request:
+    branches: "main"
+  workflow_dispatch:
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up GnuCOBOL
+        uses: fabasoad/setup-cobol-action@v1.6.1
+
+      - name: Lint App
+        run: cobc -free -I src -fsyntax-only src/*.cob -Wall -Wextra -Wno-terminator
+
+      - name: Compile and Link
+        run: cobc -free -I src -x src/*.cob -w -q
