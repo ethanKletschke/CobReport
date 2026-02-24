@@ -55,15 +55,18 @@ DATA DIVISION.
       01 TYPE PH. *> Page Heading
         05 LINE + 1.
           10 COL 1 PIC 9999/99/99 SOURCE WS-Date.
-        05 LINE + 1.
+        05 LINE + 2.
           10 COL 3 VALUE "Sale Num.".
-          10 COL 11 PIC $$,$$$,$$$.99 SOURCE FL-Profit.
+          10 COL 15 VALUE "City".
+          10 COL 35 VALUE "Profit".
         05 LINE + 1.
           10 COL 1 PIC X(40) VALUE ALL "=".
 
-      01 TYPE DE.
+      01 Report-Detail TYPE DE. *> Detail (Row Data)
         05 LINE + 1.
           10 COL 3 PIC 9(5) SOURCE FL-Sale-Num.
+          10 COL 15 PIC A(20) SOURCE FL-City.
+          10 COL 35 PIC $$,$$$,$$$.99 SOURCE FL-Profit.
 
       01 TYPE PF. *> Page Footer
         05 LINE + 1.
