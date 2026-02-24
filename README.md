@@ -1,5 +1,7 @@
 # CobReport
 
+[![Compile CobReport](https://github.com/ethanKletschke/CobReport/actions/workflows/CompileCobReport.yml/badge.svg)](https://github.com/ethanKletschke/CobReport/actions/workflows/CompileCobReport.yml)
+
 A COBOL app that generates a textfile report from a pre-defined `.dat` file.
 
 - Author: Ethan Kletschke
