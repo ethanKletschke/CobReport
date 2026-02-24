@@ -3,7 +3,7 @@
 A COBOL app that generates a textfile report from a pre-defined `.dat` file.
 
 - Author: Ethan Kletschke
-- Version: `0.1.0`
+- Version: `1.0.0`
 - Developed on: Windows 11
 - License: MIT
 - Project Metadata: [project.yaml](./meta/project.yaml)
