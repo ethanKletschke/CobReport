@@ -32,6 +32,7 @@ DATA DIVISION.
 
   WORKING-STORAGE SECTION.
     01 WS-Date PIC 9999/99/99.
+    01 EOF-Flag PIC X VALUE "N".
 
   REPORT SECTION.
     RD Sales-Report
@@ -89,6 +90,22 @@ DATA DIVISION.
 
 PROCEDURE DIVISION.
   MOVE FUNCTION CURRENT-DATE(1:8) TO WS-Date.
+
+  OPEN INPUT Sales-File.
+  OPEN OUTPUT Report-File.
+  INITIATE Sales-Report.
+
+  PERFORM UNTIL EOF-Flag = "Y"
+    READ Sales-File
+      AT END
+        MOVE "Y" TO EOF-Flag
+      NOT AT END
+        GENERATE Report-Detail
+    END-READ
+  END-PERFORM.
+
+  CLOSE Sales-File.
+  CLOSE Report-File.
 
   STOP RUN.
 
