@@ -42,7 +42,7 @@ DATA DIVISION.
   REPORT SECTION.
     *> Sales report definition
     RD Sales-Report
-      PAGE LIMIT IS 50 LINES
+      PAGE LIMIT IS 50 LINES 50 COLS
       HEADING 1 *> Heading at line 1
       FIRST DETAIL 6 *> First data row at line 6
       LAST DETAIL 50.
@@ -64,41 +64,34 @@ DATA DIVISION.
       01 TYPE PH.
         05 LINE + 1.
           *> Display today's date
-          10 COL 1 PIC 9999/99/99 SOURCE WS-Date.
+          10 COL 17 PIC 9999/99/99 SOURCE WS-Date.
         *> Column Headings
         05 LINE + 2.
           10 COL 3 VALUE "Sale Num.".
-          10 COL 15 VALUE "City".
-          10 COL 35 VALUE "Profit".
+          10 COL 19 VALUE "City".
+          10 COL 38 VALUE "Profit".
         05 LINE + 1.
-          10 COL 1 PIC X(40) VALUE ALL "=".
+          10 COL 1 PIC X(48) VALUE ALL "=".
 
       *> Detail (Row Data)
       01 Report-Detail TYPE DE.
         05 LINE + 1.
-          10 COL 3 PIC 9(5) SOURCE FL-Sale-Num.
+          10 COL 5 PIC 9(5) SOURCE FL-Sale-Num.
           10 COL 15 PIC A(20) SOURCE FL-City.
           10 COL 35 PIC $$,$$$,$$$.99 SOURCE FL-Profit.
 
       *> Page Footer
       01 TYPE PF.
         05 LINE + 1.
-          10 COL 3 PIC X(40) VALUE ALL "-".
+          10 COL 1 PIC X(48) VALUE ALL "-".
         05 LINE + 1.
           *> Page counter
-          10 COL 1 VALUE "Page".
-          10 COL + 2 SOURCE PAGE-COUNTER PIC Z9.
+          10 COL 20 VALUE "Page".
+          10 COL + 3 SOURCE PAGE-COUNTER PIC Z9.
         05 LINE + 1.
-          10 COL 3 PIC X(40) VALUE ALL "-".
-
-      *> Report Footer
-      01 TYPE RF.
+          10 COL 5 VALUE "Confidential – For Internal Use Only".
         05 LINE + 1.
-          05 COL 3 PIC X(20) VALUE ALL "*".
-        05 LINE + 1.
-          10 COL 3 VALUE "Confidential – For Internal Use Only".
-        05 LINE + 1.
-          05 COL 3 PIC X(20) VALUE ALL "*".
+          10 COL 1 PIC X(48) VALUE ALL "-".
 
 
 PROCEDURE DIVISION.
