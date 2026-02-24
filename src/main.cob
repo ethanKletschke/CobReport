@@ -77,7 +77,15 @@ DATA DIVISION.
           10 COL + 2 SOURCE PAGE-COUNTER PIC Z9.
         05 LINE + 1.
           10 COL 3 PIC X(40) VALUE ALL "-".
-      01 TYPE RF.
+
+      01 TYPE RF. *> Report Footer
+        05 LINE + 1.
+          05 COL 3 PIC X(20) VALUE ALL "*".
+        05 LINE + 1.
+          10 COL 3 VALUE "Confidential – For Internal Use Only".
+        05 LINE + 1.
+          05 COL 3 PIC X(20) VALUE ALL "*".
+
 
 PROCEDURE DIVISION.
   MOVE FUNCTION CURRENT-DATE(1:8) TO WS-Date.
