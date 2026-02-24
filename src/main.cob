@@ -127,6 +127,8 @@ PROCEDURE DIVISION.
     END-READ
   END-PERFORM.
 
+  *> End the report generation
+  TERMINATE Sales-Report.
 
   *> Close the files used in the program
   CLOSE Sales-File.
