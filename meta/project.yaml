@@ -3,11 +3,10 @@
 
 project-meta:
   project-name: CobReport
-  author: Ethan Kletschke
   date-started: 2026-02-22
   last-updated: 2026-02-22
   languages:
-    - COBOL
+    - COBOL (Free Format)
   status: Stable
   license: MIT
   version: 1.0.0
@@ -22,13 +21,13 @@ build:
   compiler:
     compiler-name: cobc
     static-compiler: false
-    compiler-version: 3.2
-    compilation:
-      compilation-method: transpile
-      source-lang: COBOL
-      transpiled-lang: C
+    compiler-version: 3.2.0
 
 team:
   author: Ethan Kletschke
+  owner: Ethan Kletschke
   contributors:
-    - Ethan Kletschke
+    - name: Ethan Kletschke
+      role: Author and Owner of Project
+      github-username: ethanKletschke
+      website: https://ethankletschke.netlify.app/
