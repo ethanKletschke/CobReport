@@ -21,9 +21,33 @@ A COBOL app that generates a textfile report from a pre-defined `.dat` file.
 
 ## How to Use CobReport
 
+### Running the App
+
 1. Decompress the `.zip` folder provided in the repo's latest release
 2. Run `CobReport.exe`
 3. Open `SalesReport.txt` to view the report.
+
+### Compiling from Source
+
+If you have `cobc` and GnuCOBOL's runtime on your system, you can
+clone the app and compile it from source.
+
+This is done by:
+
+1. Cloning the app with `git clone`
+2. Navigating into the cloned project folder
+3. Navigating into `scripts`
+4. Running `build.cmd`
+
+For Linux users, run the following in the project root folder:
+
+```bash
+cobc -I ./src -free -x ./src/**.cob -o ./bin/CobReport  -w -q
+./bin/CobReport
+```
+
+**NOTE**: The app has NOT been tested on Linux. Proceed with caution and make
+a GitHub issue for me to fix whatever the problem is.
 
 ### About `Sales.dat`
 
